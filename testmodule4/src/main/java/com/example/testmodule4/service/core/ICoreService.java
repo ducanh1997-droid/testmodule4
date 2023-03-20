@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface ICoreService<E> {
     List<E> findAll();
+    List<E> findAllSort();
     List<E> findByName(String name,String department);
 
     List<E> findByNameCategory(String department);

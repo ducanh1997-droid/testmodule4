@@ -19,7 +19,7 @@ public class EmployeeController {
     private IEmployeeService employeeService;
     @GetMapping
     public ResponseEntity<List<Employee>> findALl(){
-        return new ResponseEntity<>(employeeService.findAll(), HttpStatus.OK);
+        return new ResponseEntity<>(employeeService.findAllSort(), HttpStatus.OK);
     }
     @GetMapping("/{id}")
     public ResponseEntity<Employee> findOne(@PathVariable Long id){

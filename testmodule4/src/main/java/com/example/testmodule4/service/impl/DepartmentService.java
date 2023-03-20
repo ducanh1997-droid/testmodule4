@@ -23,6 +23,11 @@ public class DepartmentService implements IDepartmentService {
     }
 
     @Override
+    public List<Department> findAllSort() {
+        return null;
+    }
+
+    @Override
     public List<Department> findByName(String name, String department) {
         return null;
     }

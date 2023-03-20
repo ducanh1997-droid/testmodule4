@@ -16,8 +16,6 @@ import java.util.List;
 public class DepartmentController {
     @Autowired
     private IDepartmentService departmentService;
-
-
 //    @GetMapping
 //    public ModelAndView displayAll(@PageableDefault(value = 2) Pageable pageable){
 //        ModelAndView modelAndView = new ModelAndView("/category/list");

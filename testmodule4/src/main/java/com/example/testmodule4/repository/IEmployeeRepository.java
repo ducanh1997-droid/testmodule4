@@ -15,6 +15,10 @@ public interface IEmployeeRepository extends JpaRepository<Employee,Long> {
         //annotation @Param dùng để thêm tham số vào câu native query theo tên tương ứng
     List<Employee> findByName(@Param("name") String name, @Param("department") String department);
 
+    @Query(value = "select p from Employee p ORDER BY p.age ASC ")
+        //annotation @Query sử dụng để build customize query trong JPA
+        //annotation @Param dùng để thêm tham số vào câu native query theo tên tương ứng
+    List<Employee> findAllSort();
 
     @Query(value = "select p from Employee p inner join Department c on p.department.id = c.id where c.name = :department")
         //annotation @Query sử dụng để build customize query trong JPA
